@@ -25,7 +25,7 @@ def register():
     phonenumber = StringVar()
     
 
-    Label(register_screen, text="Please enter details below", bg="blue").pack()
+    Label(register_screen, text="Please enter details below", bg="red").pack()
     Label(register_screen, text="").pack()
     
     username_lable = Label(register_screen, text="Username * ")
