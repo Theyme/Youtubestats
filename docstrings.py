@@ -1,3 +1,4 @@
+import tkinter as tk
 """ Organizing data from trending Youtube videos """
 
 class Account:
@@ -10,6 +11,11 @@ class Account:
     #comment from demi
     def __init__(self, create_user, create_password):
         """Intializes the Account object"""
+        self.var = tk.StringVar()
+        self.create_user = create_user
+        self.create_password = create_password
+        
+        
         
     def register(self, create_user, create_password, create_email,
                  create_phonenum, login):
@@ -33,6 +39,25 @@ class Account:
             TypeError: no spaces for writing phone numbers and login. Also phone
             numbers need to be an integer. 
         """
+        self.create_user = create_user
+        self.create_password = create_password
+        self.create_email = create_email
+        self.create_phonenum = create_phonenum
+        self.login = login 
+        
+        #Entries for registration
+        create_user = tk.Entry()
+        create_password = tk.Entry()
+        create_email = tk.Entry()
+        create_phonenum = tk.Entry()
+        
+        #Labels 
+
+        
+        
+        #Buttons
+        button1 = tk.Button(text="Click Me")
+    
     
     def login(self, username_login, password_login, create_password,
               create_username):
@@ -53,6 +78,8 @@ class Account:
             NotImplementError: created username and password need to match with
             each other. 
         """
+        
+        
         
     def save_accountinfo(self, access_accountinfo, edit): 
         """ Users will be able to access their account information
@@ -342,3 +369,6 @@ class Bucketlist:
             list: items on the list will be deleted if users wants them to be
             deleted
         """
+        
+        
+tk.mainloop()
